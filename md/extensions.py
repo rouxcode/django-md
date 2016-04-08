@@ -7,14 +7,13 @@ import re
 from django.utils.safestring import mark_safe
 from .utils import render_mail_as_js
 
+
 __all__ = ['AutomailExtension',]
 
 
 MAIL_RE = r'\b(?i)([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]+)\b'
 
 
-# We can't re-use the built-in AutomailPattern because we need to add mailto:.
-# We also don't care about HTML-encoding the email.
 class AutomailPattern(markdown.inlinepatterns.Pattern):
     def handleMatch(self, m):
         email = m.group(2)
@@ -30,7 +29,7 @@ class AutomailPattern(markdown.inlinepatterns.Pattern):
 
 class AutomailExtension(markdown.Extension):
     """
-    An extension that turns email addresses into links.
+    An extension that turns email addresses into spam protected links.
     """
 
     def extendMarkdown(self, md, md_globals):
