@@ -66,4 +66,6 @@ class MDField(models.Field):
         return MDText(value)
 
     def get_prep_value(self, value):
-        return value.md
+        if isinstance(value, MDText):
+            return value.md
+        return value
