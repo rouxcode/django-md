@@ -15,7 +15,7 @@ var MD = ( function( $ ) {
 
     function mdwidgets() {
         if( this.length > 0 ) {
-            if( cms_admin_style === true ) {
+            if( cms_admin_style() === true ) {
                 this.addClass('cms-admin-style')
             }
             load_help();
