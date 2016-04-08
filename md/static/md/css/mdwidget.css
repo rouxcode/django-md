@@ -8,6 +8,7 @@
     border-radius: 4px;
 }
 
+form textarea.md-textarea,
 .md-textarea {
     position: relative;
     display: block;
