@@ -10,4 +10,4 @@ to be done
     * field.html: rendered output with mailto spam protection
     * widget: help with syntax guide
 * Advanced Editor
-  to be done
+    * to be done
