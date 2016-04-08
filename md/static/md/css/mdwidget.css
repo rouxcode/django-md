@@ -1,0 +1,161 @@
+.md-field {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 0 0 170px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.md-textarea {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 40px 10px 10px 10px;
+    border: 0;
+}
+
+.md-help {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding: 40px 20px;
+    border-left: 1px solid #ccc;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    transition: left 1s;
+}
+
+.md-toolbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 32px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    /*border-bottom: 0;*/
+    /*box-shadow: 0 8px 6px -4px rgba(0,0,0, 0.25);*/
+}
+
+
+/* STATES ********************************************************************/
+
+/* show-help */
+.md-field.show-help .md-help {
+    left: 50%;
+}
+
+
+/* HELP **********************************************************************/
+.md-help h1,
+.md-help h2,
+.md-help h3,
+.md-help h4 {
+    background-color: transparent;
+    color: #666;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.md-help h1 {
+    margin: 0 0 1em 0;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.md-help h2 {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.md-help h3 {
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.md-help pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+.md-help pre > code,
+.md-help pre code,
+.md-help pre tt {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    white-space: pre;
+    box-sizing: border-box;
+}
+.md-help table {
+    width: 100%;
+    overflow: auto;
+    display: block;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.md-help table tr {
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+.md-help table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+.md-help table th,
+.md-help table td {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+}
+
+
+/* TOOLBAR *******************************************************************/
+
+.md-button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 38px;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -2000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    background-color: transparent;
+    outline: none;
+}
+
+.md-button:focus,
+.md-button:active {
+    outline: none;
+}
+
+.md-button.help {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.65;
+    background-image: url(../icons/help.svg);
+}
+
+.md-field.show-help .md-button.help,
+.md-button.help:hover {
+    opacity: 1;
+    background-color: rgba(0,0,0, 0.05);
+    box-shadow: 0 0 2px 0 rgba(0,0,0, 0.25);
+}

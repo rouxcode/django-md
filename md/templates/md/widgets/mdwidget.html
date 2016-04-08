@@ -1,0 +1,7 @@
+<div id="{{ attrs.id }}-container" class="md-field">{% load i18n admin_static %}
+    <textarea{% for k, v in attrs.items %} {{ k }}="{{ v }}"{% endfor %}>{{ value }}</textarea>
+    <section class="md-help"></section>
+    <div class="md-toolbar">
+        <a class="md-button help" href="{{ help_url }}" target="blank"><span>help</span></a>
+    </div>
+</div>

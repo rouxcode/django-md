@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Markdown Help</title>
+    <meta name="robots" content="NONE,NOARCHIVE" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 3em;
+            font-size: 14px;
+            font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+            color: #333;
+            background: #fff;
+        }
+        .md-help {
+            max-width: 640px;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            font-size: 13px;
+            line-height: 19px;
+            overflow: auto;
+            padding: 6px 10px;
+            border-radius: 3px;
+        }
+        pre > code,
+        pre code,
+        pre tt {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            white-space: pre;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            overflow: auto;
+            display: block;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        table tr {
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+        }
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 6px 13px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mdhelp" class="mdhelp">
+        <h1>Markdown guide</h1>
+
+        <h2>Headers</h2>
+        <pre><code># This is an &lt;h1&gt; tag
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag</code></pre>
+
+        <h2>Bold</h2>
+        <pre><code>**This text will be bold**
+__This will also be bold__
+**You can combine it with _italic_**</code></pre>
+
+        <h2>Italic</h2>
+        <pre><code>*This text will be italic*
+_This will also be italic_
+_You can combine it with **bold**_</code></pre>
+
+        <h2>Lists</h2>
+        <h3>Unordered</h3>
+        <pre><code>* Item 1
+* Item 2
+* Item 2a
+* Item 2b</code></pre>
+        <h3>Ordered</h3>
+        <pre><code>1. Item 1
+2. Item 2
+3. Item 3
+* Item 3a
+* Item 3b</code></pre>
+
+        <h2>Links</h2>
+        <pre><code>http://www.rouxcode.ch - automatic!</pre></code>
+        <p>Would become:<br><a href="http://www.rouxcode.ch">http://www.rouxcode.ch</a></p>
+        <pre><code>email@address.org - automatic (spam protected)!</pre></code>
+        <p>Would become:<br><a href="mailto:email@address.org">email@address.org</a></p>
+        <pre><code>[Developer](http://www.rouxcode.ch)</pre></code>
+        <p>Would become:<br><a href="http://www.rouxcode.ch">Developer</a></p>
+
+        <h2>Tables</h2>
+        <p>You can create tables by assembling a list of words and dividing them with hyphens <code>-</code> (for the first row), and then separating each column with a pipe <code>|</code>:</p>
+        <pre><code>First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column</code></pre>
+        <p>Would become:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Header </th>
+                    <th> Second Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Content from cell 1 </td>
+                    <td> Content from cell 2</td>
+                </tr>
+                <tr>
+                    <td>Content in the first column </td>
+                    <td> Content in the second column</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Strikethrough</h2>
+        <p>Any word wrapped with two tildes (like <code>~~this~~</code>) will appear crossed out.</p>
+
+        <h2>Blockquotes</h2>
+        <pre><code>As Kanye West said:
+&gt; We're living the future so
+&gt; the present is our past.</code></pre>
+    </div>
+</body>
+</html>
