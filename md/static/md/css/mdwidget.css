@@ -15,7 +15,7 @@ form textarea.md-textarea,
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 40px 10px 10px 10px;
+    padding: 40px 10px 10px 10px !important;
     border: 0;
 }
 
