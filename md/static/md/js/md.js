@@ -15,6 +15,9 @@ var MD = ( function( $ ) {
 
     function mdwidgets() {
         if( this.length > 0 ) {
+            if( cms_admin_style === true ) {
+                this.addClass('cms-admin-style')
+            }
             load_help();
             for ( var i = 0; i < this.length; i++ ) {
                 var $widget = $( this[ i ] );
@@ -62,5 +65,8 @@ var MD = ( function( $ ) {
         }
     };
 
+    function cms_admin_style() {
+        return $('.toolbar-item').lenght > 0;
+    };
 
 })( django.jQuery || jQuery );
