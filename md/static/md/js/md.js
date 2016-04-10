@@ -66,7 +66,8 @@ var MD = ( function( $ ) {
     };
 
     function cms_admin_style() {
-        return $('.toolbar-item').length > 0;
+        // TODO better workaround for cms-admin-style
+        return $('.toolbar-item').length > 0 || $('body.popup').length > 0;
     };
 
 })( django.jQuery || jQuery );
